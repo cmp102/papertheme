@@ -1,0 +1,12 @@
+<header>
+	{{ $currentPage := . }}
+	{{ range .Site.Menus.main }}
+	<a class="btn col-1" href="{{ .URL }}">{{ .Name }}</a>
+	{{ end }}
+	
+	{{ if .IsTranslated }}
+		{{ range .Translations }}
+			<a class="btnlang" href="{{ .Permalink }}">{{ .Lang }}{{ .Site.Params.flag }}</a>
+		{{ end }}
+	{{ end }}
+</header>
