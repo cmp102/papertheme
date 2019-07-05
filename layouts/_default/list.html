@@ -1,0 +1,15 @@
+{{ define "main" -}}
+  {{ range .Data.Pages -}}
+  <div class="container">
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="date">{{ .Date.Format "02-01-2006" }}</time>
+    <a href="{{ .Permalink }}"><h1 class="title left">{{ .Title }}</h1></a>
+    <div class="separator-dis"></div>
+    <p>
+      {{ .Summary }}
+    </p>
+    {{ if .Truncated }}
+    <a href="{{ .RelPermalink }}">Read More…</a>
+    {{ end }}
+  </div>
+  {{- end }}
+{{- end }}
