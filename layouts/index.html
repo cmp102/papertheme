@@ -1,0 +1,13 @@
+{{ define "main" -}}
+<div class="posts">
+  <div>
+      <h1 >{{ .Site.Title }}</h1>
+      <img src="/images/logo.png" width="70px">
+  </div>
+  <div class="container">
+    <h1 >{{ .Params.header }}</h1>
+    <div class="separator-dis"></div>
+    <p>{{ .Content }}</p>
+  </div>
+</div>
+{{- end }}
