@@ -128,6 +128,12 @@ footer{
 	color: grey;
 }
 
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .left {
 	text-align: left
 }
@@ -138,5 +144,6 @@ footer{
 
 p {
 	font-size: 16px;
+	color: rgb(41, 41, 41)
 }
 
